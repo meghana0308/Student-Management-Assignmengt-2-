@@ -1,0 +1,36 @@
+<div class="form-root">
+
+  <div class="form-background">
+    <div class="box box-background--blue animationLeftRight"></div>
+    <div class="box box-background--cyan200 animationRightLeft tans3s"></div>
+    <div class="box box-background--gray100 animationLeftRight tans4s"></div>
+    <div class="box box-background--blue800 animationRightLeft"></div>
+  </div>
+
+  <div class="form-wrapper glass">
+    <h2>Welcome Back 👋</h2>
+
+    <p class="error">{{ error() }}</p>
+
+    <div class="field">
+      <input
+        type="email"
+        required
+        [ngModel]="email()"
+        (ngModelChange)="email.set($event)" />
+      <label>Email</label>
+    </div>
+
+    <div class="field">
+      <input
+        type="password"
+        required
+        [ngModel]="password()"
+        (ngModelChange)="password.set($event)" />
+      <label>Password</label>
+    </div>
+
+    <button class="primary-btn" (click)="login()">Login</button>
+  </div>
+
+</div>

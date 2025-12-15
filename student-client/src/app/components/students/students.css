@@ -1,0 +1,160 @@
+.students-container {
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #f4e1d2, #f9efe5);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.student-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.student-form input {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #b2b2b2;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.student-form input:focus {
+  border-color: #f18973;
+  box-shadow: 1 1 8px rgba(241,137,115,0.4);
+  outline:#333 ;
+}
+
+.student-form button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #bc5a45;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.student-form button:hover {
+  background: #f18973;
+  transform: scale(1.05);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+th {
+  background: #bc5a45;
+  color: white;
+  padding: 0.6rem;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+
+td {
+  padding: 0.5rem;
+  text-align: center;
+  color: #000000;
+}
+
+.student-row {
+  background: linear-gradient(90deg, #f4e1d2, #f9efe5);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.student-row:nth-child(odd) {
+  background: linear-gradient(90deg, #a19c9c, #f1aa9d);
+}
+
+.student-row:nth-child(even) {
+  background: linear-gradient(90deg, #f18973, #bbb1ae);
+  color: white;
+}
+
+.student-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(246, 238, 238, 0.15);
+}
+
+.status-message {
+  font-weight: bold;
+  color: #bc5a45;
+  margin-bottom: 1rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(15px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 3; }
+  100% { opacity: 3; }
+}
+.form-root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Animated background */
+.form-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.box {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+
+.box-background--blue { background: #bc5a45; top:10%; left:-120px; }
+.box-background--cyan200 { background: #f18973; top:30%; left:45%; }
+.box-background--gray100 { background: #f4e1d2; top:60%; left:-200px; }
+.box-background--blue800 { background: #b2b2b2; top:50%; left:80%; }
+
+@keyframes animationLeftRight {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(1200px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes animationRightLeft {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-1200px); }
+  100% { transform: translateX(0); }
+}
+
+.animationLeftRight { animation: animationLeftRight 12s ease-in-out infinite; }
+.animationRightLeft { animation: animationRightLeft 15s ease-in-out infinite; }
+.tans3s { animation-duration: 18s; }
+.tans4s { animation-duration: 22s; }
+
+/* Card wrapper */
+.form-wrapper {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 30px;
+  width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,230 @@
+.register-container {
+  background: rgba(255,255,255,0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  width: 300px;
+  margin: auto;
+  animation: fadeIn 0.8s ease;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #6a11cb;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: #6a11cb;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background: #6a11cb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #2575fc;
+  transform: scale(1.05);
+}
+
+.message {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: green;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease;
+}
+.form-root {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Animated background */
+.form-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.box {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+
+.box-background--blue { background: #ecc1c1; }
+.box-background--cyan200 { background: #d3f7d3; }
+.box-background--gray100 { background: #c4e1ef; }
+.box-background--blue800 { background: #d7ccf7; }
+
+@keyframes animationLeftRight {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(1200px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes animationRightLeft {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-1200px); }
+  100% { transform: translateX(0); }
+}
+
+.animationLeftRight { animation: animationLeftRight 12s ease-in-out infinite; }
+.animationRightLeft { animation: animationRightLeft 15s ease-in-out infinite; }
+.tans3s { animation-duration: 18s; }
+.tans4s { animation-duration: 22s; }
+
+/* Card wrapper */
+.form-wrapper {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 30px;
+  width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* Glass card */
+.glass {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 40px;
+  width: 380px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: fadeUp 0.8s ease;
+}
+
+/* Title */
+.glass h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #444;
+}
+
+/* Floating input field */
+.field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.field input {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+}
+
+.field label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  background: white;
+  padding: 0 6px;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+  top: -8px;
+  font-size: 12px;
+  color: #ff6f69;
+}
+
+/* Button */
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6f69, #ffcc5c);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Messages */
+.error {
+  color: #d9534f;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.info {
+  margin-top: 15px;
+  text-align: center;
+  color: #444;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

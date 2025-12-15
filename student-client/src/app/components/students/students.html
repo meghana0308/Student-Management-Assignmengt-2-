@@ -1,0 +1,46 @@
+<div class="form-root">
+
+  <div class="form-background">
+    <div class="box box-background--blue animationLeftRight"></div>
+    <div class="box box-background--cyan200 animationRightLeft tans3s"></div>
+    <div class="box box-background--gray100 animationLeftRight tans4s"></div>
+    <div class="box box-background--blue800 animationRightLeft"></div>
+  </div>
+
+  <div class="form-wrapper students-wrapper">
+<div class="students-container">
+  <h2>Students</h2>
+
+  <div *ngIf="message()" class="status-message">{{ message() }}</div>
+
+  <form (ngSubmit)="saveStudent()" class="student-form">
+    <input type="text" placeholder="Name" [(ngModel)]="selectedStudent().name" name="name" required />
+    <input type="text" placeholder="Class" [(ngModel)]="selectedStudent().class" name="class" required />
+    <input type="text" placeholder="Section" [(ngModel)]="selectedStudent().section" name="section" required />
+    <button type="submit">{{ selectedStudent().id ? 'Update' : 'Add' }}</button>
+    <button type="button" (click)="selectedStudent.set({ name: '', class: '', section: '' })">Clear</button>
+  </form>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Class</th>
+      <th>Section</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let s of students(); let i = index" class="student-row" [style.animation-delay]="i * 0.1 + 's'">
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.class }}</td>
+      <td>{{ s.section }}</td>
+      <td>
+        <button (click)="selectStudent(s)">Edit</button>
+        <button (click)="deleteStudent(s.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
+</div>
+
+</div>

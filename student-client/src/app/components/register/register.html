@@ -1,0 +1,41 @@
+<div class="form-root">
+
+  <div class="form-background">
+    <div class="box box-background--blue animationLeftRight"></div>
+    <div class="box box-background--cyan200 animationRightLeft tans3s"></div>
+    <div class="box box-background--gray100 animationLeftRight tans4s"></div>
+    <div class="box box-background--blue800 animationRightLeft"></div>
+  </div>
+
+  <div class="form-wrapper glass">
+    <h2>Create Account ✨</h2>
+
+    <form (ngSubmit)="register()">
+
+      <div class="field">
+        <input
+          type="email"
+          required
+          name="email"
+          [ngModel]="email()"
+          (ngModelChange)="email.set($event)" />
+        <label>Email</label>
+      </div>
+
+      <div class="field">
+        <input
+          type="password"
+          required
+          name="password"
+          [ngModel]="password()"
+          (ngModelChange)="password.set($event)" />
+        <label>Password</label>
+      </div>
+
+      <button class="primary-btn" type="submit">Register</button>
+    </form>
+
+    <p class="info">{{ message() }}</p>
+  </div>
+
+</div>
