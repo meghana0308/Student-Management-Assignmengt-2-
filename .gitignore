@@ -1,0 +1,24 @@
+# =========================
+# Node / Angular / Frontend
+# =========================
+node_modules/
+dist/
+build/
+.angular/
+.env
+.env.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# .NET / ASP.NET Core
+# =========================
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+.vs/
+
